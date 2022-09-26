@@ -13,28 +13,31 @@ public class CalculadoraController : Controller
     {
         ViewBag.N1 = n1;
         ViewBag.N2 = n2;
-        ViewBag.Operacao = operacao;
         
         switch(operacao)
         {
             case "Soma":
                 ViewBag.Titulo = "Soma";
-                ViewBag.Resultado = $"O resultado de {ViewBag.N1} + {ViewBag.N2} é {ViewBag.N1 + ViewBag.N2}";
+                ViewBag.Operacao = "+";
+                ViewBag.Resultado = n1 + n2;
                 break;
         
             case "Subtração": 
                 ViewBag.Titulo = "Subtração";
-                ViewBag.Resultado = $"O resultado de {ViewBag.N1} - {ViewBag.N2} é {ViewBag.N1 - ViewBag.N2}";
+                ViewBag.Operacao = "-";
+                ViewBag.Resultado = n1-n2;
                 break;
             
             case "Multiplicação":
                 ViewBag.Titulo = "Multiplicação";
-                ViewBag.Resultado = $"O resultado de {ViewBag.N1} * {ViewBag.N2} é {ViewBag.N1 * ViewBag.N2}";
+                ViewBag.Operacao = "*";
+                ViewBag.Resultado = n1*n2;
                 break;
             
             case "Divisão":
                 ViewBag.Titulo = "Divisão";
-                ViewBag.Resultado = $"O resultado de {ViewBag.N1} ÷ {ViewBag.N2} é {ViewBag.N1 / ViewBag.N2}";
+                ViewBag.Operacao = "÷";
+                ViewBag.Resultado = n1/n2;
                 break;
 
             default:
